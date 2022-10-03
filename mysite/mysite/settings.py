@@ -121,3 +121,21 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Para utilizar a autenticação customizada é necessário adicionar:
+# To use the custom auth is necessary to add:
+AUTH_USER_MODEL = 'customauth.MyUser'
+
+# Para utilizar a autenticação customizada é interessante adicionar urls de redirecionamento customizadas:
+# To use the custom auth is interesting to add custom redirect urls:
+LOGIN_REDIRECT_URL = '/'  # insira sua url | insert your url
+LOGOUT_REDIRECT_URL = '/' # insira sua url | insert your url
+
+# Exemplos / examples:
+# LOGIN_REDIRECT_URL = 'home'
+# Após o login, será redirecionado para o home
+# After login, the user will be redirect to the home page
+
+# LOGOUT_REDIRECT_URL = 'auth.login' 
+# Após o logout, será redirecionado para o home
+# After logout, the user will be redirect to the login page
