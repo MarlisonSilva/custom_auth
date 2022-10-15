@@ -20,6 +20,7 @@ Para usar o App, basta seguir os passos abaixo:
   LOGIN_REDIRECT_URL = '/sua_url' # Coloque a url deseja pós login (autenticar no sistema)
   LOGIN_REDIRECT_URL = '/sua_url' # Coloque a url deseja pós logout (encerrar sessão no sistema)
   ```
+- no mesmo arquivo, adicione o app aos ``INSTALLED_APPS``
   
 Pronto! Agora seu sistema de login deve estar corretamente configurado.
 
