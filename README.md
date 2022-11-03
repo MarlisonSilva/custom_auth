@@ -9,7 +9,7 @@ Para usar o App, basta seguir os passos abaixo:
 
 ### Início
 - baixar o código deste repositório;
-- copiar a pasta do app: ``custom_auth``;
+- copiar a pasta do app: ``customauth``;
 - colar a pasta do item acima dentro da mesma pasta do seu arquivo manage.py;
 
 ### Implementação
@@ -18,9 +18,12 @@ Para usar o App, basta seguir os passos abaixo:
   ``` python
   AUTH_USER_MODEL = 'customauth.MyUser' # não alterar
   LOGIN_REDIRECT_URL = '/sua_url' # Coloque a url deseja pós login (autenticar no sistema)
-  LOGIN_REDIRECT_URL = '/sua_url' # Coloque a url deseja pós logout (encerrar sessão no sistema)
+  LOGOUT_REDIRECT_URL = 'nome_url' # Coloque a url deseja pós logout (encerrar sessão no sistema)
   ```
-  
+- no mesmo arquivo, adicione o app aos ``INSTALLED_APPS``
+
+OBS: se precisar criar uma chave estrangeira com o usuário, é possível simplesmente importar ele no models.py do seu app.
+
 Pronto! Agora seu sistema de login deve estar corretamente configurado.
 
 > O App atualmente só conta com registro, login e logout
